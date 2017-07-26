@@ -67,6 +67,10 @@ function Tareas(title){
    // this.id = undefined;
     this.title = title;
     this.completed = false;
+    /*this.isChecked = function(){
+        resul.innerHTML =' <p><input type="checkbox" id="'+i+'"><label for="'+i+'" editable>'+datos.title+'</label></p>';
+        
+    }*/
 }
 
 var buttonAdd = document.getElementById("buttonAdd");
@@ -85,8 +89,14 @@ function listar(){
     for(var i in arrDatos){
         datos = arrDatos[i];
         var resul = document.getElementById("resultado");
-        resul.innerHTML +=' <p><input type="checkbox" id="'+i+'"><label for="'+i+'" editable>'+datos.title+'</label></p>';
+         resul.innerHTML +=' <p><input type="checkbox" id="'+i+'"><label for="'+i+'" editable>'+datos.title+'</label></p>';
+      /*  if(i.checked){
+           
+            datos.completed = true;
+
+        }*/
     }
+    console.log(arrDatos);
 }
 
 function limpiar(){
