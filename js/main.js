@@ -85,8 +85,7 @@ function listar(){
     for(var i in arrDatos){
         datos = arrDatos[i];
         var resul = document.getElementById("resultado");
-        resul.innerHTML += "<input type=" + "checkbox " +"/>"+
-                           "<label>" + datos.title + "</label>" + "<br>";
+        resul.innerHTML +=' <p><input type="checkbox" id="'+i+'"><label for="'+i+'" editable>'+datos.title+'</label></p>';
     }
 }
 
